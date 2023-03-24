@@ -8,7 +8,9 @@ module.exports = {
     "./components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      'bg-gradient': 'linear-gradient(135deg, #065A60, #003355)'
+    },
   },
   plugins: [],
 };

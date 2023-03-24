@@ -1,9 +1,10 @@
-import { View, Text, SafeAreaView, Image } from "react-native";
+import { View, Text, SafeAreaView, Image, ScrollView } from "react-native";
 import React from "react";
 import { MaterialIcons, MaterialCommunityIcons } from "@expo/vector-icons";
 import cryptologo from "../../../assets/cryptologo.png";
 import SecondaryButton from "../../components/CustomButtons/SecondaryButton";
 import PrimaryButton from "../../components/CustomButtons/PrimaryButton";
+import CoinItem from "../../components/CoinItem/CoinItem";
 
 const HomeScreen = () => {
   return (
@@ -32,25 +33,39 @@ const HomeScreen = () => {
       </View>
 
       {/* Round Border Section */}
-      <View className="mt-8 items-center">
-        <View className="bg-transparent border-8 border-[#4D194D] rounded-full flex-col w-60 h-60 items-center justify-center">
-          <Text className="text-[#F2E9E4] text-xl font-semibold capitalize mb-4">total balance</Text>
-          <Text className="text-2xl text-[#065A60] font-bold mb-2">${" "}16 000.29</Text>
-          {/* Percentiles */}
-          <View className="flex-row items-center space-x-2 text-center">
-            <Text className="text-[#003356] text-base font-medium">+3.86%</Text>
-            <Text className="text-[#F2E9E4] text-3xl font-medium">|</Text>
-            <Text className="text-[#003356] text-base font-medium">-$132.55</Text>
+      <View className="mt-8 items-center relative">
+        <View className="px-5 py-5 rounded-full bg-[#4D194D] shadow-xl shadow-[#065A60]">
+          <View className="bg-[#00111C] rounded-full flex-col w-56 h-56 shadow-md shadow-black items-center justify-center">
+            <Text className="text-[#F2E9E4] text-xl font-semibold capitalize mb-4">
+              total balance
+            </Text>
+            <Text className="text-2xl text-[#065A60] font-bold mb-2">
+              $ 16 000.29
+            </Text>
+            {/* Percentiles */}
+            <View className="flex-row items-center space-x-2 text-center">
+              <Text className="text-[#003356] text-base font-medium">
+                +3.86%
+              </Text>
+              <Text className="text-[#F2E9E4] text-3xl font-medium">|</Text>
+              <Text className="text-[#003356] text-base font-medium">
+                -$132.55
+              </Text>
+            </View>
           </View>
         </View>
       </View>
 
       {/* Mid Section, two buttons : primary and seconday*/}
-      <View className="flex-row px-6 items-center justify-between mt-6">
+      <View className="flex-row px-6 items-center justify-evenly mt-6">
         <SecondaryButton onPress={() => {}} text="trade" />
         <PrimaryButton onPress={() => {}} text="transfer" />
       </View>
+      <View className="flex-1 items-center mt-4 px-6 bg-slate-300">
+        {/* left View -- contains an Image, the title and a sub */}
+        <CoinItem />
 
+      </View>
     </SafeAreaView>
   );
 };
