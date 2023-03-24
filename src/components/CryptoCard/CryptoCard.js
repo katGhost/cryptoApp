@@ -7,6 +7,10 @@ const CryptoCard = () => {
   return (
     <View>
       <FlatList
+      data={cryptocurrencies}
+      renderItem={({item}) => <CoinItem marketCoin={item} index={item} />}
+      scrollEnabled={true}
+      showsVerticalScrollIndicator={false}
       />
     </View>
   )

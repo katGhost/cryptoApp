@@ -5,6 +5,7 @@ import cryptologo from "../../../assets/cryptologo.png";
 import SecondaryButton from "../../components/CustomButtons/SecondaryButton";
 import PrimaryButton from "../../components/CustomButtons/PrimaryButton";
 import CoinItem from "../../components/CoinItem/CoinItem";
+import CryptoCard from "../../components/CryptoCard/CryptoCard";
 
 const HomeScreen = () => {
   return (
@@ -61,9 +62,9 @@ const HomeScreen = () => {
         <SecondaryButton onPress={() => {}} text="trade" />
         <PrimaryButton onPress={() => {}} text="transfer" />
       </View>
-      <View className="flex-1 items-center mt-4 px-6 bg-slate-300">
+      <View className="flex-1 items-center mt-4 px-6 pb-4">
         {/* left View -- contains an Image, the title and a sub */}
-        <CoinItem />
+        <CryptoCard />
 
       </View>
     </SafeAreaView>

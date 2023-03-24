@@ -9,7 +9,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      'bg-gradient': 'linear-gradient(135deg, #065A60, #003355)'
+      colors: {
+        primary: {
+          500: "#DC2626",
+        },
+        secondary: {
+          500: "#16A34A",
+        },
+      },
     },
   },
   plugins: [],
